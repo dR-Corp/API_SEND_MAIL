@@ -67,7 +67,6 @@
     }
 
     header('Content-Type: application/json');
-    echo json_encode($data, JSON_PRETTY_PRINT);
     echo json_encode($response, JSON_PRETTY_PRINT);
 	
 ?>
