@@ -16,6 +16,12 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $postData = file_get_contents('php://input');
         parse_str($postData, $data);
+
+        if(!isset($data["to"])) {
+            $postData = file_get_contents('php://input');
+            $data = json_decode($postData, true);
+        }
+
     }
 
     extract($data);
